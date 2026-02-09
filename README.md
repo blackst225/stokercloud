@@ -27,7 +27,7 @@ Diese Custom Integration liest Daten von der StokerCloud API und stellt sie als 
 3. Gehen Sie zu **Einstellungen → Geräte & Dienste**
 4. Klicken Sie auf **+ Integration hinzufügen**
 5. Suchen Sie nach **"StokerCloud Custom"**
-6. Geben Sie Ihren Benutzernamen ein (z.B. `certusbk`)
+6. Geben Sie Ihren Benutzernamen ein (z.B. `Nbe-Pellet`)
 7. Fertig! 🎉
 
 ### Methode 2: HACS (empfohlen für Updates)
