@@ -16,7 +16,6 @@ Diese Custom Integration liest Daten von der StokerCloud API und stellt sie als 
   - Lambda Ist/Soll
   - Lichtsensor
   - Heizungsmodus (mit deutscher Übersetzung)
-  - Pumpenstatus
 
 ## Installation
 
