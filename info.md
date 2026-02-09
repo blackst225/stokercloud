@@ -15,5 +15,4 @@ Diese Integration liest Ihre StokerCloud Heizungsdaten und stellt sie in Home As
 - ✅ Einfache Einrichtung - nur Benutzername erforderlich
 - ✅ Alle Heizungsdaten als Sensoren
 - ✅ Automatische Updates alle 60 Sekunden
-- ✅ Pumpenstatus
 - ✅ Deutsche Übersetzungen
