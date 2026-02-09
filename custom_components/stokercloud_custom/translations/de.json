@@ -1,0 +1,20 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "StokerCloud Einrichtung",
+        "description": "Geben Sie Ihren StokerCloud Benutzernamen ein",
+        "data": {
+          "username": "Benutzername (z.B. certusbk)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung zur StokerCloud API fehlgeschlagen",
+      "unknown": "Unerwarteter Fehler aufgetreten"
+    },
+    "abort": {
+      "already_configured": "Dieser Benutzer wurde bereits konfiguriert"
+    }
+  }
+}

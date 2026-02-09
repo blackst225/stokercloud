@@ -1,0 +1,12 @@
+{
+  "domain": "stokercloud_custom",
+  "name": "StokerCloud Custom",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/yourusername/stokercloud_custom",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/yourusername/stokercloud_custom/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
