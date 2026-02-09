@@ -56,7 +56,6 @@ Nach der Installation werden automatisch folgende Sensoren erstellt:
 - `sensor.stokercloud_lambda_soll`
 - `sensor.stokercloud_lichtsensor`
 - `sensor.stokercloud_modus`
-- `sensor.stokercloud_pumpe`
 - `sensor.stokercloud_datum`
 
 ## Fehlerbehebung
