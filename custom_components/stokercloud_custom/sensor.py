@@ -16,6 +16,16 @@ from .const import DOMAIN
 _LOGGER = logging.getLogger(__name__)
 
 
+def _scale_temp_tenths(value):
+    """Convert values like '710.0' -> 71.0 (tenths of °C to °C)."""
+    if value is None:
+        return None
+    try:
+        return float(value) / 10.0
+    except (TypeError, ValueError):
+        return None
+
+
 async def async_setup_entry(
     hass: HomeAssistant,
     entry: ConfigEntry,
@@ -33,6 +43,15 @@ async def async_setup_entry(
             SensorDeviceClass.TEMPERATURE,
             SensorStateClass.MEASUREMENT,
             lambda data: data["jsondata"][1]["2"][0]["0"],
+        ),
+        StokerCloudSensor(
+            coordinator,
+            "Kessel Solltemperatur",
+            "boiler_target_temp",
+            "°C",
+            SensorDeviceClass.TEMPERATURE,
+            SensorStateClass.MEASUREMENT,
+            lambda data: _scale_temp_tenths(data["jsondata"][1]["2"][3]["3"]),
         ),
         StokerCloudSensor(
             coordinator,
