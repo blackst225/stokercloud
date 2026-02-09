@@ -23,7 +23,7 @@ async def async_setup_entry(
 ) -> None:
     """Set up StokerCloud Custom sensors."""
     coordinator = hass.data[DOMAIN][entry.entry_id]
-    
+
     sensors = [
         StokerCloudSensor(
             coordinator,
@@ -125,9 +125,8 @@ async def async_setup_entry(
             lambda data: data["jsondata"][3]["6"],
         ),
         StokerCloudModusSensor(coordinator),
-        StokerCloudPumpSensor(coordinator),
     ]
-    
+
     async_add_entities(sensors)
 
 
@@ -186,7 +185,7 @@ class StokerCloudModusSensor(CoordinatorEntity, SensorEntity):
         """Return the translated state."""
         try:
             value = self.coordinator.data["jsondata"][2]["4"][7]["11"]
-            
+
             translations = {
                 "Slukket": "AUS",
                 "Slukket ekstern kontakt": "AUS",
@@ -197,37 +196,8 @@ class StokerCloudModusSensor(CoordinatorEntity, SensorEntity):
                 "Alarm ingen brændsel": "FEHLER KEINE FLAMME",
                 "Stoppet - temperatur opnået": "Aus - Temperatur erreicht",
             }
-            
+
             return translations.get(value, value)
-        except (KeyError, IndexError, TypeError):
-            return None
-
-    @property
-    def device_info(self):
-        """Return device information."""
-        return {
-            "identifiers": {(DOMAIN, self.coordinator.username)},
-            "name": f"StokerCloud {self.coordinator.username}",
-            "manufacturer": "NBE",
-            "model": "StokerCloud Heizung",
-        }
-
-
-class StokerCloudPumpSensor(CoordinatorEntity, SensorEntity):
-    """Binary sensor for pump status."""
-
-    def __init__(self, coordinator):
-        """Initialize the sensor."""
-        super().__init__(coordinator)
-        self._attr_name = "StokerCloud Pumpe"
-        self._attr_unique_id = f"{coordinator.username}_pump"
-
-    @property
-    def native_value(self):
-        """Return pump state."""
-        try:
-            value = self.coordinator.data["jsondata"][2]["4"][14]["23"]
-            return "EIN" if value == "1" else "AUS"
         except (KeyError, IndexError, TypeError):
             return None
 
