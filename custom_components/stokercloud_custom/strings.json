@@ -5,7 +5,7 @@
         "title": "StokerCloud Einrichtung",
         "description": "Geben Sie Ihren StokerCloud Benutzernamen ein",
         "data": {
-          "username": "Benutzername (z.B. certusbk)"
+          "username": "Benutzername (z.B. NBE-xxx)"
         }
       }
     },
