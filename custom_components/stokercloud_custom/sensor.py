@@ -211,8 +211,8 @@ class StokerCloudModusSensor(CoordinatorEntity, SensorEntity):
                 "Stoppet ekstern temperatur": "AUS über EXT Kontakt",
                 "Drift": "EIN",
                 "Opt&aelig;nding 1": "Zündung",
-                "Fejl optænding": "Zündungsfehler",
-                "Alarm ingen brændsel": "FEHLER KEINE FLAMME",
+                "Alarm ingen br&aelig;ndsel": "Zündungsfehler",
+                "Alarm ingen br&aelig;ndsel": "FEHLER KEINE FLAMME",
                 "Stoppet - temperatur opn&aring;et": "Aus - Temperatur erreicht",
             }
 
